@@ -43,6 +43,7 @@ module.exports = {
     "react-hooks",
   ],
   rules: {
+    "prettier/prettier": 1,
     "@typescript-eslint/adjacent-overload-signatures": 2,
     "@typescript-eslint/array-type": 2,
     "@typescript-eslint/ban-types": 2,
