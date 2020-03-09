@@ -1,11 +1,9 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
-import { theme, GlobalStyles } from "../../styles";
-// Components
-import { CSSDebugger } from "../css-debugger";
-import { Link } from "../link";
-import { Footer } from "../footer";
+
+import DefaultTheme from "../styles/themes/default";
+import { Link } from "./link";
 
 const Container = styled.div`
   margin: 0 auto;
@@ -22,7 +20,7 @@ const Title = styled.h1`
 const Tagline = styled.h2`
   font-size: 1.1rem;
   font-weight: 400;
-  color: ${props => props.theme.colors.blue};
+  color: ${props => props.theme.colors.primary};
 `;
 
 const Layout: React.FC = ({ children }) => {
@@ -40,17 +38,14 @@ const Layout: React.FC = ({ children }) => {
   const { title, description } = data.site.siteMetadata;
 
   return (
-    <ThemeProvider theme={theme()}>
+    <ThemeProvider theme={DefaultTheme}>
       <Container>
-        <GlobalStyles />
-        <CSSDebugger />
         <Link to="/">
           <Title>{title.toUpperCase()}</Title>
         </Link>
         <Tagline>{description}</Tagline>
         <br />
         <main>{children}</main>
-        <Footer />
       </Container>
     </ThemeProvider>
   );
