@@ -7,7 +7,7 @@ type MetaItem = {
   content: string;
 };
 
-type SEOProps = {
+type Props = {
   title?: string;
   description?: string;
   url?: string;
@@ -17,7 +17,7 @@ type SEOProps = {
   image?: string;
 };
 
-const SEO: React.FC<SEOProps> = props => {
+const SEO: React.FC<Props> = props => {
   const data = useStaticQuery(graphql`
     {
       site {

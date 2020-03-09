@@ -17,25 +17,18 @@ const Title = styled.h1`
   color: white;
 `;
 
-const Tagline = styled.h2`
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: ${props => props.theme.colors.primary};
-`;
-
 const Layout: React.FC = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
           title
-          description
         }
       }
     }
   `);
 
-  const { title, description } = data.site.siteMetadata;
+  const { title } = data.site.siteMetadata;
 
   return (
     <ThemeProvider theme={DefaultTheme}>
@@ -43,7 +36,6 @@ const Layout: React.FC = ({ children }) => {
         <Link to="/">
           <Title>{title.toUpperCase()}</Title>
         </Link>
-        <Tagline>{description}</Tagline>
         <br />
         <main>{children}</main>
       </Container>

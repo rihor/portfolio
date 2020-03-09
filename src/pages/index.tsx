@@ -6,6 +6,7 @@ import { Link } from "../components/link";
 const App = () => (
   <Layout>
     <SEO title="Pedro Pinho" />
+    <div>Hello World</div>
     <Link to="/about">About</Link>
   </Layout>
 );

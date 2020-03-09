@@ -1,6 +1,6 @@
 {
   "name": "gatsby-starter-typescript-deluxe",
-  "description": "A Gatsby starter with TypeScript, Storybook, Styled Components, Jest, and more.",
+  "description": "A Gatsby starter with TypeScript and Styled Components.",
   "version": "0.0.3",
   "license": "MIT",
   "repository": {
@@ -11,19 +11,12 @@
     "url": "https://github.com/gojutin/gatsby-starter-typescript-deluxe/issues"
   },
   "scripts": {
-    "develop": "gatsby develop",
-    "dev": "yarn run develop",
-    "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
-    "lint": "eslint . --ext ts --ext tsx --ext js --ext jsx",
-    "lint:watch": "esw -w . --ext ts --ext tsx --ext js --ext jsx",
-    "lint:fix": "yarn run lint --fix",
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "dev": "gatsby develop",
     "serve": "gatsby serve",
-    "storybook": "start-storybook -p 6006",
     "clean": "gatsby clean",
     "build": "gatsby build",
-    "build:storybook": "build-storybook",
+    "lint": "eslint . --ext ts --ext tsx --ext js --ext jsx",
+    "lint:fix": "yarn run lint --fix",
     "update": "ncu -u"
   },
   "dependencies": {
@@ -66,13 +59,8 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
-    "eslint-watch": "^6.0.1",
-    "identity-obj-proxy": "^3.0.0",
     "npm-check-updates": "^4.0.4",
     "prettier": "^1.19.1",
-    "tslint": "^6.0.0",
-    "tslint-immutable": "^6.0.1",
-    "tslint-react": "^4.2.0",
     "typescript": "^3.8.3"
   }
 }
