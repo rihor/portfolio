@@ -1,9 +1,12 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { useStaticQuery, graphql } from "gatsby";
 
 import DefaultTheme from "../styles/themes/default";
-import { Link } from "./link";
+import { Nav } from "./nav";
+
+type Props = {
+  children: React.ReactNode;
+};
 
 const Container = styled.div`
   margin: 0 auto;
@@ -11,36 +14,13 @@ const Container = styled.div`
   padding: 2rem;
 `;
 
-const Title = styled.h1`
-  font-size: ${props => (props.theme.screens.sm ? "1.8rem" : "2.2rem")};
-  margin: 20px 0px;
-  color: white;
-`;
-
-const Layout: React.FC = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
-  const { title } = data.site.siteMetadata;
-
-  return (
-    <ThemeProvider theme={DefaultTheme}>
-      <Container>
-        <Link to="/">
-          <Title>{title.toUpperCase()}</Title>
-        </Link>
-        <br />
-        <main>{children}</main>
-      </Container>
-    </ThemeProvider>
-  );
-};
+const Layout: React.FC<Props> = ({ children }) => (
+  <ThemeProvider theme={DefaultTheme}>
+    <Container>
+      <Nav />
+      <main>{children}</main>
+    </Container>
+  </ThemeProvider>
+);
 
 export { Layout };

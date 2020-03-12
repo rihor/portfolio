@@ -15,9 +15,10 @@ type Props = {
   keywords?: string[];
   meta?: MetaItem[];
   image?: string;
+  themeColor?: string;
 };
 
-const SEO: React.FC<Props> = props => {
+function SEO(props: Props): React.ReactElement {
   const data = useStaticQuery(graphql`
     {
       site {
@@ -126,8 +127,12 @@ const SEO: React.FC<Props> = props => {
       // titleTemplate={`%s | ${siteTitle}`}
       meta={metaData}
       link={linkData}
-    />
+    >
+      {props.themeColor && (
+        <meta content={props.themeColor} name="theme-color" />
+      )}
+    </Helmet>
   );
-};
+}
 
 export { SEO };
