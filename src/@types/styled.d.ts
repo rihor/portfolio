@@ -4,13 +4,6 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     title: string,
 
-    screens: {
-      // max-widths in pixels
-      sm: number,
-      md: number,
-      lg: number,
-      xl: number,
-    },
     colors: {
       primary: string,
       secundary: string,
@@ -18,5 +11,10 @@ declare module 'styled-components' {
       background: string,
       text: string,
     },
+
+    font: {
+      primary: string,
+      secundary: string,
+    }
   }
 }

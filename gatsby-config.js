@@ -1,10 +1,17 @@
 const siteTitle = "gatsby-starter-typescript-deluxe";
 const siteDescription =
   "A Gatsby starter with TypeScript, Storybook, Styled Components, Framer Motion, Jest, and more.";
-const siteAuthor = "@gojutin";
-const siteUrl = "https://gatsby-starter-typescript-deluxe.netlify.com";
+const siteAuthor = "Pedro Pinho";
+const siteUrl = "https://github.com/rihor";
 const siteImage = `${siteUrl}/icons/icon_512x512.png`;
-const siteKeywords = ["gatsby", "typescript", "starter", "javascript", "react"];
+const siteKeywords = [
+  "portfolio",
+  "rihor",
+  "gatsby",
+  "typescript",
+  "javascript",
+  "react",
+];
 
 module.exports = {
   siteMetadata: {
@@ -16,6 +23,14 @@ module.exports = {
     image: siteImage,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: siteUrl,
+        sitemap: "https://www.example.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -49,6 +64,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
+        theme_color_in_head: false, // This will avoid adding theme-color meta tag.
         icon: "src/images/icon.png",
         icons: [
           {
@@ -65,5 +81,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
   ],
 };
