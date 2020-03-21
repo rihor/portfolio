@@ -14,7 +14,7 @@ const Container = styled.div`
   background: ${({ theme }) => theme.colors.background};
   padding: 0px 20px;
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 `;
 

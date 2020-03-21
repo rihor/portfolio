@@ -7,7 +7,7 @@ const light: DefaultTheme = {
     primary: "#c62e65",
     secundary: "#d63af9",
 
-    background: "#eaeaea",
+    background: "#efefef",
     text: "#2d2d2d",
   },
 };
