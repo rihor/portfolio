@@ -1,22 +1,27 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider, DefaultTheme } from "styled-components";
 
-import DefaultTheme from "../styles/themes/default";
+import GlobalStyles from "../styles/global-styles";
+import light from "../styles/themes/light";
 import { Nav } from "./nav";
 
 type Props = {
   children: React.ReactNode;
+  theme?: DefaultTheme;
 };
 
 const Container = styled.div`
+  background: ${({ theme }) => theme.colors.background};
+  padding: 0px 20px;
+  width: 100%;
+  max-width: 900px;
   margin: 0 auto;
-  max-width: 1080px;
-  padding: 2rem;
 `;
 
-const Layout: React.FC<Props> = ({ children }) => (
-  <ThemeProvider theme={DefaultTheme}>
+const Layout: React.FC<Props> = ({ children, theme = light }) => (
+  <ThemeProvider theme={theme}>
     <Container>
+      <GlobalStyles />
       <Nav />
       <main>{children}</main>
     </Container>
