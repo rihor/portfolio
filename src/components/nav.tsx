@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
-const StyledNav = styled.nav`
-  padding: 40px 0;
+const Header = styled.header`
+  height: 120px;
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -14,44 +14,52 @@ const StyledNav = styled.nav`
     text-decoration: none;
     color: ${({ theme }) => theme.colors.text};
   }
+`;
 
-  > a {
-    font-size: 40px;
-    font-weight: 600;
+const TitleLink = styled(Link)`
+  font-size: 40px;
+  font-weight: 600;
+`;
+
+const List = styled.ul`
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    margin: 0 10px;
   }
 
-  ul {
-    display: flex;
-    justify-content: space-between;
+  a {
+    font-weight: 400;
+    font-size: 18px;
+  }
 
-    li {
-      margin: 0 10px;
-
-      a {
-        font-weight: 400;
-        font-size: 16px;
-      }
+  @media screen and (max-width: 600px) {
+    a {
+      font-size: 16px;
     }
   }
 `;
 
 function Nav(): React.ReactElement {
   return (
-    <StyledNav role="navigation">
-      <Link to="/">P</Link>
+    <Header>
+      <TitleLink to="/">P</TitleLink>
 
-      <ul>
-        <li>
-          <Link to="/skills">Skills</Link>
-        </li>
-        <li>
-          <Link to="/projects">Projects</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
-    </StyledNav>
+      <nav role="navigation">
+        <List>
+          <li>
+            <Link to="/skills">Skills</Link>
+          </li>
+          <li>
+            <Link to="/projects">Projects</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+        </List>
+      </nav>
+    </Header>
   );
 }
 
