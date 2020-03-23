@@ -76,7 +76,7 @@ function Home() {
         </Article>
         <aside>
           {console.log("canvas")}
-          <canvas className="char" width={200} height={200}></canvas>
+          <canvas className="char" width={240} height={240} />
         </aside>
       </Section>
     </Layout>
