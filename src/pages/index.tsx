@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
+import mountAndRunCharAnimation from "../animation/character";
 import light from "../styles/themes/light";
 
 const Section = styled.section`
@@ -12,12 +13,13 @@ const Section = styled.section`
   justify-content: space-between;
 
   aside {
-    width: 200px;
-    height: 200px;
-    border: 2px dotted #0005;
-    border-radius: 16px;
+    width: 300px;
+    height: 300px;
     margin-bottom: 100px;
     margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   @media screen and (max-width: 800px) {
@@ -34,7 +36,8 @@ const Section = styled.section`
 `;
 
 const Article = styled.article`
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
@@ -50,7 +53,11 @@ const Article = styled.article`
   }
 `;
 
-const App = () => {
+function Home() {
+  useEffect(() => {
+    mountAndRunCharAnimation(".char");
+  }, []);
+
   return (
     <Layout theme={light}>
       <SEO title="Pedro Pinho" themeColor={light.colors.background} />
@@ -67,10 +74,13 @@ const App = () => {
             Mauris sit amet erat tempus, hendrerit eros vel, ullamcorper dui.
           </p>
         </Article>
-        <aside></aside>
+        <aside>
+          {console.log("canvas")}
+          <canvas className="char" width={200} height={200}></canvas>
+        </aside>
       </Section>
     </Layout>
   );
-};
+}
 
-export default App;
+export default Home;
