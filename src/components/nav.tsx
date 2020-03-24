@@ -46,7 +46,7 @@ function Nav(): React.ReactElement {
     <Header>
       <TitleLink to="/">P</TitleLink>
 
-      <nav role="navigation">
+      <nav>
         <List>
           <li>
             <Link to="/skills">Skills</Link>
