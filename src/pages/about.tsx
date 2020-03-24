@@ -2,8 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { RouteComponentProps } from "@reach/router";
+
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
+import purple from "../styles/themes/purple";
 
 /***************************************************************
   Below are some examples of using styled-components with the
@@ -15,16 +17,6 @@ import { SEO } from "../components/seo";
 */
 const StyledComponent1 = styled.p`
   color: ${props => props.theme.colors.primary};
-  font-size: 1.2rem;
-`;
-
-/*
-  2. A styled component that changes color based on the screen size
-  using the theme.
-*/
-const StyledComponent2 = styled.p`
-  color: ${({ theme }) =>
-    theme.screens.sm ? theme.colors.primary : theme.colors.secundary};
   font-size: 1.2rem;
 `;
 
@@ -78,18 +70,6 @@ const AboutPage: React.FC<RouteComponentProps> = ({ location = {} }) => {
       </h3>
 
       <StyledComponent1>I am a basic styled component.</StyledComponent1>
-      <StyledComponent2>
-        My font color should change on a small device.
-      </StyledComponent2>
-
-      <BlocksWrapper>
-        <OrangeBlock
-          animate={{ rotate: 360 }}
-          transition={{ duration: 2 }}
-          whileHover={{ rotate: 1.1 }}
-        />
-        <BlueBlock />
-      </BlocksWrapper>
     </Layout>
   );
 };

@@ -2,7 +2,7 @@ import { Illustration, Ellipse, RoundedRect, Shape, TAU } from "zdog";
 
 export default (elementIdentifier: string) => {
   let isSpinning = true;
-  let rotatesClockwide = true;
+  let rotatesClockwise = true;
   const hipX = 3;
   const armSize = 6;
 
@@ -16,14 +16,14 @@ export default (elementIdentifier: string) => {
 
   function animate(illustration: Illustration): void {
     if (illustration.rotate.y >= 1) {
-      rotatesClockwide = false;
+      rotatesClockwise = false;
     }
 
     if (illustration.rotate.y <= -1) {
-      rotatesClockwide = true;
+      rotatesClockwise = true;
     }
 
-    if (rotatesClockwide) {
+    if (rotatesClockwise) {
       illustration.rotate.y += isSpinning ? 0.01 : 0;
     } else {
       illustration.rotate.y -= isSpinning ? 0.01 : 0;
