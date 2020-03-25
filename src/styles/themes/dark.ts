@@ -1,4 +1,5 @@
 import { DefaultTheme } from "styled-components";
+import chroma from "chroma-js";
 
 const dark: DefaultTheme = {
   title: "dark",
@@ -8,6 +9,10 @@ const dark: DefaultTheme = {
     secundary: "#d63af9",
 
     background: "#121212",
+    metaBackground: chroma("#121212")
+      .darken()
+      .desaturate()
+      .hex(),
     text: "#fafafa",
   },
 };
