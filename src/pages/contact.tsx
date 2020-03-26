@@ -3,10 +3,11 @@ import styled from "styled-components";
 
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
+import { ImageLinkItem } from "../components/imageLinkItem";
 import purple from "../styles/themes/purple";
-import email from "../images/email.svg";
-import github from "../images/github.svg";
-import linkedin from "../images/linkedin.svg";
+import emailSVG from "../images/email.svg";
+import githubSVG from "../images/github.svg";
+import linkedinSVG from "../images/linkedin.svg";
 
 const Article = styled.article`
   height: calc(100vh - 120px);
@@ -24,12 +25,6 @@ const Header = styled.header`
 
   span {
     margin-left: 10px;
-  }
-
-  @media screen and (max-width: 700px) {
-    & {
-      justify-content: left;
-    }
   }
 `;
 
@@ -50,11 +45,6 @@ const List = styled.ul`
   }
 `;
 
-const Image = styled.img`
-  width: 50px;
-  height: 50px;
-`;
-
 export default function Contact() {
   return (
     <Layout theme={purple}>
@@ -69,36 +59,24 @@ export default function Contact() {
           </h1>
         </Header>
         <List>
-          <li>
-            <a
-              href="mailto: rihor.pedro@outlook.com?subject=[CONTACT]"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image src={email} alt="Email" />
-              <p>Email</p>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/rihor"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image src={github} alt="Github" />
-              <p>Github</p>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/phpinhov/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image src={linkedin} alt="Linkedin" />
-              <p>Linkedin</p>
-            </a>
-          </li>
+          <ImageLinkItem
+            url="mailto: rihor.pedro@outlook.com?subject=[CONTACT]"
+            src={emailSVG}
+            alt="Email"
+            text="Email"
+          />
+          <ImageLinkItem
+            url="https://github.com/rihor"
+            src={githubSVG}
+            alt="Github"
+            text="Github"
+          />
+          <ImageLinkItem
+            url="https://www.linkedin.com/in/phpinhov/"
+            src={linkedinSVG}
+            alt="Linkedin"
+            text="Linkedin"
+          />
         </List>
       </Article>
     </Layout>
