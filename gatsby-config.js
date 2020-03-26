@@ -1,16 +1,19 @@
-const siteTitle = "gatsby-starter-typescript-deluxe";
+const siteTitle = "Pedro Pinho Portfolio";
 const siteDescription =
-  "A Gatsby starter with TypeScript, Storybook, Styled Components, Framer Motion, Jest, and more.";
+  "My portfolio, come and see :)";
 const siteAuthor = "Pedro Pinho";
-const siteUrl = "https://github.com/rihor";
+const siteUrl = "http://rihor-portfolio.surge.sh";
 const siteImage = `${siteUrl}/icons/icon_512x512.png`;
 const siteKeywords = [
   "portfolio",
-  "rihor",
+  "full-stack",
+  "fullstack",
+  "developer",
   "gatsby",
   "typescript",
   "javascript",
   "react",
+  "rihor",
 ];
 
 module.exports = {
