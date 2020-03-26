@@ -60,7 +60,7 @@ function Home() {
 
   return (
     <Layout theme={light}>
-      <SEO title="Pedro Pinho" themeColor={light.colors.background} />
+      <SEO title="Pedro Pinho" themeColor={light.colors.metaBackground} />
       <Section>
         <Article>
           <h1>
