@@ -24,6 +24,11 @@ const Article = styled.article`
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
+
+    h1,
+    p {
+      text-align: center;
+    }
   }
 
   > section {
@@ -47,6 +52,7 @@ const IconsSection = styled.section`
 
 const List = styled.ul`
   display: flex;
+  flex-wrap: wrap;
 
   li {
     height: 120px;
@@ -70,7 +76,7 @@ export default function Skills() {
         <header>
           <h1>My skills</h1>
           <p>
-            Throught my life I&#x27;ve gathered some experience with these
+            Through my life I&#x27;ve gathered some experience with these
             tecnologies
           </p>
         </header>
