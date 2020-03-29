@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Finder",
+    "description": "App that searches for content on google images and wikipedia for any givern subject.",
+    "codeUrl": "https://github.com/rihor/finder",
+    "demoUrl": "https://finder-rihor.herokuapp.com/",
+    "image": "./images/celso.png"
+  },
+  {
+    "title": "Go Barber",
+    "description": "App to search to manage your barber shop and to book an appointment.",
+    "codeUrl": "https://github.com/rihor/gobarber-backend",
+    "image": "./images/celso.png"
+  }
+]
