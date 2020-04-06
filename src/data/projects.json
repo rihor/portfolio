@@ -1,15 +1,65 @@
 [
   {
+    "title": "Ouvidor",
+    "description": "University project, Application for municipal ombudsman.",
+    "tecnologies": ["Express", "React", "React Native"],
+    "codeUrl": "https://github.com/ouvidor",
+    "images": ["./images/celso.png"]
+  },
+  {
     "title": "Finder",
     "description": "App that searches for content on google images and wikipedia for any givern subject.",
+    "tecnologies": ["Javascript", "Express", "Algorithmia", "Watson"],
     "codeUrl": "https://github.com/rihor/finder",
     "demoUrl": "https://finder-rihor.herokuapp.com/",
-    "image": "./images/celso.png"
+    "images": ["./images/finder.png"]
   },
   {
     "title": "Go Barber",
-    "description": "App to search to manage your barber shop and to book an appointment.",
-    "codeUrl": "https://github.com/rihor/gobarber-backend",
-    "image": "./images/celso.png"
+    "description": "App to manage your barber shop and to book an appointment.",
+    "tecnologies": ["React", "React Native", "Express"],
+    "codeUrl": "https://github.com/rihor/gobarber",
+    "images": ["./images/gobarber.png"]
+  },
+  {
+    "title": "Meetup",
+    "description": "This app allows you to plan and subscribe to events close to you.",
+    "tecnologies": ["React", "React Native", "Express"],
+    "codeUrl": "https://github.com/rihor/meetup",
+    "images": ["./images/meetup.png"]
+  },
+  {
+    "title": "RocketShoes",
+    "description": "Frontend of an e-commerce that sells shoes.",
+    "tecnologies": ["React"],
+    "codeUrl": "https://github.com/rihor/rocketshoes",
+    "images": ["./images/rocketshoes.png"]
+  },
+  {
+    "title": "Portfolio",
+    "description": "This portfolio right here.",
+    "tecnologies": ["Typescript", "Gatsby"],
+    "codeUrl": "https://github.com/rihor/portfolio",
+    "demoUrl": "http://www.rihor-portfolio.surge.sh",
+    "images": ["./images/portfolio.png"]
+  },
+  {
+    "title": "Wallpp",
+    "description": "App to upload and download wallpapers that I developed to learn Next and Adonis.",
+    "tecnologies": ["Next", "Adonis"],
+    "codeUrl": "https://github.com/rihor/Wallpp",
+    "images": ["./images/wallpp_home.png", "./images/wallpp_sign.png"]
+  },
+  {
+    "title": "Forum",
+    "description": "Backend of a forum that I developed to learn Typescript and TypeORM.",
+    "tecnologies": ["Typescript", "Express", "TypeORM"],
+    "codeUrl": "https://github.com/rihor/Forum-backend"
+  },
+  {
+    "title": "Pokemon Image List",
+    "description": "Relates PokeAPI results to high quality official images.",
+    "tecnologies": ["Python", "PokeAPI", "Requests"],
+    "codeUrl": "https://github.com/rihor/pokemon-image-list"
   }
 ]

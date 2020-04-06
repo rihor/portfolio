@@ -1,34 +1,57 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
+import styled, { css } from "styled-components";
 import Img from "gatsby-image";
 import chroma from "chroma-js";
 
-const ProjectContainer = styled.li`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
+import { useInterval } from "../hooks";
+
+type ProjectsContainerProps = {
+  hasImage: number;
+};
+
+// eslint-disable-next-line
+const VerticalGridWithImage = css `
+  grid-template-rows: 250px 1fr;
+  grid-template-areas: "image" "body";
+`;
+
+// eslint-disable-next-line
+const VerticalGridWithoutImage = css `
+  grid-template-rows: 1fr;
+  grid-template-areas: "body";
+`;
+
+const ProjectContainer = styled.li<ProjectsContainerProps>`
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  grid-template-rows: 250px;
+  grid-template-areas: "body image";
+
   margin-bottom: 20px;
   background: ${({ theme }) => theme.colors.secundary};
 
   @media screen and (max-width: 900px) {
     & {
-      flex-direction: column-reverse;
+      grid-template-columns: 1fr;
+
+      ${({ hasImage }) =>
+        hasImage ? VerticalGridWithImage : VerticalGridWithoutImage}
     }
   }
 `;
 
 const ProjectBody = styled.section`
-  height: 250px;
-  max-width: 540px;
-  padding: 20px;
+  grid-area: body;
+  padding: 25px 20px;
   display: flex;
-  justify-content: space-between;
   align-items: left;
+  justify-content: space-between;
   flex-direction: column;
 `;
 
 const Header = styled.header`
+  margin-bottom: 40px;
+
   h2 {
     font-size: 32px;
     font-weight: 900;
@@ -36,9 +59,21 @@ const Header = styled.header`
   }
 `;
 
+const TechList = styled.ul`
+  display: flex;
+
+  li {
+    padding: 4px 6px;
+    margin-top: 10px;
+    margin-right: 5px;
+    font-size: 16px;
+    background: #0002;
+  }
+`;
+
 const ButtonLink = styled.a`
   background: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.background};
   padding: 5px 10px;
   transition: all 0.3s;
 
@@ -57,18 +92,7 @@ const ButtonLink = styled.a`
 `;
 
 const StyledImg = styled(Img)`
-  min-width: 500px;
-  max-width: 500px;
-  min-height: 250px;
-  max-height: 250px;
-
-  @media screen and (max-width: 900px) {
-    & {
-      min-width: 100%;
-      max-width: 500px;
-      height: 250px;
-    }
-  }
+  grid-area: image;
 `;
 
 type Props = {
@@ -76,14 +100,34 @@ type Props = {
 };
 
 const Project: React.FC<Props> = ({ project }) => {
-  const { title, description, codeUrl, demoUrl, image } = project;
+  const { title, description, tecnologies, codeUrl, demoUrl, images } = project;
+
+  const [imagePosition, setImagePosition] = useState(0);
+
+  useInterval(() => {
+    if (!images) return;
+
+    const lastImageIndex = images.length - 1;
+    const nextPosition = imagePosition + 1;
+
+    if (lastImageIndex < nextPosition) {
+      setImagePosition(0);
+    } else {
+      setImagePosition(nextPosition);
+    }
+  }, 3000);
 
   return (
-    <ProjectContainer>
+    <ProjectContainer hasImage={images ? 1 : 0}>
       <ProjectBody>
         <Header>
           <h2>{title}</h2>
           <p>{description}</p>
+          <TechList>
+            {tecnologies.map(tech => (
+              <li key={tech}>{tech}</li>
+            ))}
+          </TechList>
         </Header>
         <div>
           {codeUrl && (
@@ -106,7 +150,12 @@ const Project: React.FC<Props> = ({ project }) => {
           )}
         </div>
       </ProjectBody>
-      <StyledImg sizes={image.childImageSharp.fluid} alt={title} />
+      {images && (
+        <StyledImg
+          sizes={images[imagePosition].childImageSharp.fluid}
+          alt={title}
+        />
+      )}
     </ProjectContainer>
   );
 };

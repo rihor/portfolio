@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
 import { Project } from "../components/project";
-import green from "../styles/themes/green";
+import blue from "../styles/themes/blue";
 
 const Article = styled.article`
   display: flex;
@@ -53,14 +53,13 @@ export default function ProjectsPage({ data }: AllProjectsQueryType) {
   });
 
   return (
-    <Layout theme={green}>
-      <SEO title="Projects" themeColor={green.colors.metaBackground} />
+    <Layout theme={blue}>
+      <SEO title="Projects" themeColor={blue.colors.metaBackground} />
       <Article>
         <header>
           <h1>My Projects</h1>
         </header>
 
-        {console.log(data)}
         <ul>
           {projectsArray.map(project => (
             <Project key={project.id} project={project} />
@@ -78,9 +77,10 @@ export const AllProjectsQuery = graphql`
         node {
           demoUrl
           description
+          tecnologies
           title
           codeUrl
-          image {
+          images {
             childImageSharp {
               fluid(maxWidth: 500) {
                 ...GatsbyImageSharpFluid_tracedSVG
