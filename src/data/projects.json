@@ -4,7 +4,7 @@
     "description": "University project, Application for municipal ombudsman.",
     "tecnologies": ["Express", "React", "React Native"],
     "codeUrl": "https://github.com/ouvidor",
-    "images": ["./images/celso.png"]
+    "images": ["./images/ouvidor.png"]
   },
   {
     "title": "Finder",
