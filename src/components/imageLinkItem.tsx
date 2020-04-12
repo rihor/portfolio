@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Image = styled.img`
   /* width: 50px; */
@@ -11,16 +12,18 @@ type Props = {
   src: string;
   alt: string;
   text?: string;
-  tooltip?: string;
 };
 
-const ImageLinkItem: React.FC<Props> = ({ url, src, alt, text, tooltip }) => (
-  <li>
+const ImageLinkItem: React.FC<Props> = ({ url, src, alt, text }) => (
+  <motion.li
+    initial={{ opacity: 0, rotate: 50 }}
+    animate={{ opacity: 1, rotate: 0 }}
+  >
     <a href={url} target="_blank" rel="noopener noreferrer">
       <Image src={src} alt={alt} />
       {text && <p>{text}</p>}
     </a>
-  </li>
+  </motion.li>
 );
 
 export { ImageLinkItem };

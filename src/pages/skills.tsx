@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
@@ -50,7 +51,7 @@ const IconsSection = styled.section`
   }
 `;
 
-const List = styled.ul`
+const List = styled(motion.ul)`
   display: flex;
   flex-wrap: wrap;
 
@@ -83,12 +84,14 @@ export default function Skills() {
         <section>
           <IconsSection>
             <h2>Frontend</h2>
-            <List>
+            <List
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+            >
               <ImageLinkItem
                 src={reactSVG}
                 url="https://reactjs.org/"
                 alt="React"
-                tooltip="React"
               />
               <ImageLinkItem
                 src={nextSVG}
@@ -104,7 +107,10 @@ export default function Skills() {
           </IconsSection>
           <IconsSection>
             <h2>Backend</h2>
-            <List>
+            <List
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+            >
               <ImageLinkItem
                 src={expressSVG}
                 url="https://expressjs.com/"
@@ -124,7 +130,10 @@ export default function Skills() {
           </IconsSection>
           <IconsSection>
             <h2>General</h2>
-            <List>
+            <List
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+            >
               <ImageLinkItem
                 src={jestSVG}
                 url="https://jestjs.io/"

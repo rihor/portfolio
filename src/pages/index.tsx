@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
@@ -35,7 +36,7 @@ const Section = styled.section`
   }
 `;
 
-const Article = styled.article`
+const Article = styled(motion.article)`
   max-width: 500px;
   width: 100%;
   margin-bottom: 100px;
@@ -62,7 +63,10 @@ function Home() {
     <Layout theme={light}>
       <SEO title="Pedro Pinho" themeColor={light.colors.metaBackground} />
       <Section>
-        <Article>
+        <Article
+          initial={{ opacity: 0, skew: 30, x: -250 }}
+          animate={{ opacity: 1, skew: 0, x: 0 }}
+        >
           <h1>
             <span>Pedro Pinho.</span>
             <span>FullStack Developer.</span>

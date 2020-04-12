@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import Img from "gatsby-image";
 import chroma from "chroma-js";
+import { motion } from "framer-motion";
 
 import { useInterval } from "../hooks";
 
@@ -21,7 +22,7 @@ const VerticalGridWithoutImage = css `
   grid-template-areas: "body";
 `;
 
-const ProjectContainer = styled.li<ProjectsContainerProps>`
+const ProjectContainer = styled(motion.li)<ProjectsContainerProps>`
   display: grid;
   grid-template-columns: 1fr 500px;
   grid-template-rows: 250px;
@@ -118,7 +119,11 @@ const Project: React.FC<Props> = ({ project }) => {
   }, 3000);
 
   return (
-    <ProjectContainer hasImage={images ? 1 : 0}>
+    <ProjectContainer
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      hasImage={images ? 1 : 0}
+    >
       <ProjectBody>
         <Header>
           <h2>{title}</h2>

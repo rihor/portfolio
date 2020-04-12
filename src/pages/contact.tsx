@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
@@ -28,7 +29,7 @@ const Header = styled.header`
   }
 `;
 
-const List = styled.ul`
+const List = styled(motion.ul)`
   display: flex;
 
   li {
@@ -58,7 +59,7 @@ export default function Contact() {
             </span>
           </h1>
         </Header>
-        <List>
+        <List initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
           <ImageLinkItem
             url="mailto: rihor.pedro@outlook.com?subject=[CONTACT]"
             src={emailSVG}
