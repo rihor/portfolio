@@ -26,7 +26,7 @@ function SEO(props: Props): React.ReactElement {
           title
           description
           author
-          url
+          siteUrl
           keywords
           image
         }

@@ -72,10 +72,9 @@ function Home() {
             <span>FullStack Developer.</span>
           </h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu ex
-            est. Proin pulvinar pharetra eros finibus viverra. Integer
-            sollicitudin iaculis lobortis. In accumsan semper ullamcorper.
-            Mauris sit amet erat tempus, hendrerit eros vel, ullamcorper dui.
+            Passionate about development, I study every day to become a better
+            developer. I love web development and I can bring your idea to
+            market.
           </p>
         </Article>
         <aside>
