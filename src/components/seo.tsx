@@ -128,6 +128,9 @@ function SEO(props: Props): React.ReactElement {
       meta={metaData}
       link={linkData}
     >
+      <html lang="en" />
+      <meta charSet="utf-8" />
+      <meta name="description" content={siteDescription} />
       {props.themeColor && (
         <meta content={props.themeColor} name="theme-color" />
       )}
