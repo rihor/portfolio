@@ -1,8 +1,7 @@
 const siteTitle = "Pedro Pinho Portfolio";
-const siteDescription =
-  "My portfolio, come and see :)";
+const siteDescription = "My portfolio, come and see :)";
 const siteAuthor = "Pedro Pinho";
-const siteUrl = "http://rihor-portfolio.surge.sh";
+const siteUrl = "https://rihor-portfolio.now.sh";
 const siteImage = `${siteUrl}/icons/icon_512x512.png`;
 const siteKeywords = [
   "portfolio",
@@ -21,16 +20,16 @@ module.exports = {
     title: siteTitle,
     description: siteDescription,
     author: siteAuthor,
-    url: siteUrl,
+    siteUrl,
     keywords: siteKeywords,
     image: siteImage,
   },
   plugins: [
     {
-      resolve: "gatsby-plugin-robots-txt",
+      resolve: `gatsby-plugin-robots-txt`,
       options: {
         host: siteUrl,
-        sitemap: "https://www.example.com/sitemap.xml",
+        sitemap: `${siteUrl}/sitemap.xml`,
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
@@ -50,7 +49,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-react-axe",
+      resolve: `gatsby-plugin-react-axe`,
       options: {
         showInProduction: false,
         // Options to pass to axe-core.
@@ -63,7 +62,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    "gatsby-plugin-react-helmet",
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -91,7 +90,7 @@ module.exports = {
         ],
       },
     },
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -99,5 +98,6 @@ module.exports = {
         omitGoogleFont: true
       },
     },
+    `gatsby-plugin-sitemap`,
   ],
 };
