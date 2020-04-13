@@ -131,6 +131,10 @@ function SEO(props: Props): React.ReactElement {
       <html lang="en" />
       <meta charSet="utf-8" />
       <meta name="description" content={siteDescription} />
+      <meta
+        name="google-site-verification"
+        content="R5rOZMb-ywS9eSQuMI7JJ_N7vDj586JudWu8c0tQNuI"
+      />
       {props.themeColor && (
         <meta content={props.themeColor} name="theme-color" />
       )}
