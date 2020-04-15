@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
-import styled from "styled-components";
+import styled, { DefaultTheme } from "styled-components";
+
+import Logo from "./logo";
 
 const Header = styled.header`
   height: 120px;
@@ -14,11 +16,6 @@ const Header = styled.header`
     text-decoration: none;
     color: ${({ theme }) => theme.colors.text};
   }
-`;
-
-const TitleLink = styled(Link)`
-  font-size: 40px;
-  font-weight: 600;
 `;
 
 const List = styled.ul`
@@ -41,10 +38,16 @@ const List = styled.ul`
   }
 `;
 
-function Nav(): React.ReactElement {
+type Props = {
+  theme: DefaultTheme;
+};
+
+function Nav({ theme }: Props): React.ReactElement {
   return (
     <Header>
-      <TitleLink to="/">P</TitleLink>
+      <Link to="/">
+        <Logo theme={theme} />
+      </Link>
 
       <nav>
         <List>

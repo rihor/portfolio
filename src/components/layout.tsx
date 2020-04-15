@@ -22,7 +22,7 @@ const Layout: React.FC<Props> = ({ children, theme = light }) => (
   <ThemeProvider theme={theme}>
     <Container>
       <GlobalStyles />
-      <Nav />
+      <Nav theme={theme} />
       <main>{children}</main>
     </Container>
   </ThemeProvider>

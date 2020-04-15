@@ -5,8 +5,8 @@ const light: DefaultTheme = {
   title: "light",
 
   colors: {
-    primary: "#c62e65",
-    secundary: "#d63af9",
+    primary: "#1d9ed1",
+    secundary: "#ffc83d",
 
     background: "#efefef",
     metaBackground: chroma("#efefef")

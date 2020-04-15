@@ -5,8 +5,8 @@ const purple: DefaultTheme = {
   title: "purple",
 
   colors: {
-    primary: "#7159C1",
-    secundary: "#B04D48",
+    primary: "#FB8862",
+    secundary: "#7159C1",
 
     background: "#583375",
     metaBackground: chroma("#583375")
