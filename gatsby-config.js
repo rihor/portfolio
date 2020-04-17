@@ -75,7 +75,7 @@ module.exports = {
         theme_color: `#2d2d2d`,
         display: `minimal-ui`,
         theme_color_in_head: false, // This will avoid adding theme-color meta tag.
-        icon: "icons/icon_521x512.png",
+        icon: "src/images/icon.png",
         icons: [
           {
             src: "icons/icon_512x512.png",
