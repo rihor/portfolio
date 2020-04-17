@@ -71,11 +71,11 @@ module.exports = {
         short_name: siteTitle,
         description: siteDescription,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#2d2d2d`,
+        theme_color: `#2d2d2d`,
         display: `minimal-ui`,
         theme_color_in_head: false, // This will avoid adding theme-color meta tag.
-        icon: "src/images/icon.png",
+        icon: "icons/icon_521x512.png",
         icons: [
           {
             src: "icons/icon_512x512.png",
