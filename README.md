@@ -7,6 +7,7 @@ It was a delight to develop this. Gatsby and Typescript were amazing to work wit
 - **TypeScript**
 - **Styled-Components**
 - **Framer Motion**
+- **Zdog**
 - **ESLint (with TSLint and Prettier)**
 - **React Axe and React A11y for accessibility**
 
