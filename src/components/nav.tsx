@@ -45,7 +45,7 @@ type Props = {
 function Nav({ theme }: Props): React.ReactElement {
   return (
     <Header>
-      <Link to="/">
+      <Link to="/" aria-label="Logo">
         <Logo theme={theme} />
       </Link>
 
