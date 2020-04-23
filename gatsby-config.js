@@ -78,13 +78,13 @@ module.exports = {
         icon: "src/images/icon.png",
         icons: [
           {
-            src: "icons/icon_512x512.png",
-            sizes: "512x512",
+            src: "icons/icon_512x819.png",
+            sizes: "512x819",
             types: "image/png",
           },
           {
-            src: "icons/icon_192x192.png",
-            sizes: "192x192",
+            src: "icons/icon_120x192.png",
+            sizes: "120x192",
             types: "image/png",
           },
         ],
