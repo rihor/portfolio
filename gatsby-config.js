@@ -1,5 +1,5 @@
 const siteTitle = "Pedro Pinho Portfolio";
-const siteDescription = "My portfolio, come and see :)";
+const siteDescription = "My portfolio, where I have my projects, skills and info. 🙂";
 const siteAuthor = "Pedro Pinho";
 const siteUrl = "https://rihor-portfolio.now.sh";
 const siteImage = `${siteUrl}/icons/icon_512x512.png`;
