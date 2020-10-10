@@ -41,7 +41,7 @@
     "description": "This portfolio right here.",
     "tecnologies": ["Typescript", "Gatsby"],
     "codeUrl": "https://github.com/rihor/portfolio",
-    "demoUrl": "http://www.rihor-portfolio.surge.sh",
+    "demoUrl": "https://rihor-portfolio.now.sh/",
     "images": ["./images/portfolio.png"]
   },
   {
