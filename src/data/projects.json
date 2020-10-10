@@ -33,6 +33,7 @@
     "description": "Frontend of an e-commerce that sells shoes.",
     "tecnologies": ["React"],
     "codeUrl": "https://github.com/rihor/rocketshoes",
+    "demoUrl": "https://rocketshoes-rihor.vercel.app/",
     "images": ["./images/rocketshoes.png"]
   },
   {
