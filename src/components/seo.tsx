@@ -135,6 +135,12 @@ function SEO(props: Props): React.ReactElement {
         name="google-site-verification"
         content="R5rOZMb-ywS9eSQuMI7JJ_N7vDj586JudWu8c0tQNuI"
       />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins&family=Work+Sans:wght@700&display=swap"
+        rel="stylesheet"
+      />
+
       {props.themeColor && (
         <meta content={props.themeColor} name="theme-color" />
       )}

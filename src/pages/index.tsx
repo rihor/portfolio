@@ -44,13 +44,24 @@ const Article = styled(motion.article)`
   flex-direction: column;
   justify-content: center;
 
-  h1 {
+  header {
     display: flex;
     flex-direction: column;
+    margin-bottom: 16px;
+
+    h1 {
+      font-size: clamp(34px, 42px, 42px);
+      margin-left: -0.04em;
+    }
+
+    h2 {
+      font-size: clamp(16px, 22px, 24px);
+      opacity: 0.8;
+    }
   }
 
-  span:nth-child(1) {
-    margin-right: 0.2em;
+  p {
+    line-height: 150%;
   }
 `;
 
@@ -67,10 +78,10 @@ function Home() {
           initial={{ opacity: 0, skew: 30, x: -250 }}
           animate={{ opacity: 1, skew: 0, x: 0 }}
         >
-          <h1>
-            <span>Pedro Pinho.</span>
-            <span>FullStack Developer.</span>
-          </h1>
+          <header>
+            <h1>Pedro Pinho</h1>
+            <h2>FullStack Developer</h2>
+          </header>
           <p>
             Passionate about development, I study every day to become a better
             developer. I love web development and I can bring your idea to

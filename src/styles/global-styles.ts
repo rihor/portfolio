@@ -39,7 +39,11 @@ export default createGlobalStyle`
     cursor: pointer;
   }
 
-  * {
-    font-family: "Open Sans", sans-serif !important;
+  h1, h2, h3, h4, h5 {
+    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+  }
+
+  p, span, em, a, li {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
   }
 `;
