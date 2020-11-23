@@ -24,8 +24,12 @@ const Header = styled.header`
   align-items: center;
   margin-bottom: 50px;
 
-  span {
-    margin-left: 10px;
+  h1 {
+    font-size: clamp(36px, 42px, 42px);
+
+    span {
+      margin-left: 10px;
+    }
   }
 `;
 

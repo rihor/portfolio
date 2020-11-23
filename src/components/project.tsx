@@ -53,19 +53,23 @@ const ProjectBody = styled.section`
 const Header = styled.header`
   margin-bottom: 40px;
 
-  h2 {
-    font-size: 32px;
-    font-weight: 900;
-    margin-bottom: 15px;
+  h1 {
+    font-size: clamp(26px, 32px, 36px);
+    margin-bottom: 10px;
+  }
+
+  p {
+    line-height: 150%;
   }
 `;
 
 const TechList = styled.ul`
   display: flex;
+  margin-top: 10px;
 
   li {
     padding: 4px 6px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-right: 5px;
     font-size: 16px;
     background: #0002;
@@ -126,7 +130,7 @@ const Project: React.FC<Props> = ({ project }) => {
     >
       <ProjectBody>
         <Header>
-          <h2>{title}</h2>
+          <h1>{title}</h1>
           <p>{description}</p>
           <TechList>
             {tecnologies.map(tech => (

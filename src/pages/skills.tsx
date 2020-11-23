@@ -26,6 +26,10 @@ const Article = styled.article`
     align-items: center;
     margin-bottom: 50px;
 
+    h1 {
+      font-size: clamp(36px, 42px, 42px);
+    }
+
     h1,
     p {
       text-align: center;

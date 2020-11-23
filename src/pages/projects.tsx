@@ -20,6 +20,10 @@ const Article = styled.article`
     justify-content: center;
     flex-direction: column;
     margin-bottom: 50px;
+
+    h1 {
+      font-size: clamp(36px, 42px, 42px);
+    }
   }
 
   > section {
