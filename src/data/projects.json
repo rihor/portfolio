@@ -7,6 +7,18 @@
     "images": ["./images/ouvidor.png"]
   },
   {
+    "title": "Abismo",
+    "description": "My blog that I use to post my texts from my book club.",
+    "tecnologies": ["Typescript", "Prismic", "Next", "React Three Fiber"],
+    "codeUrl": "https://github.com/rihor/blog",
+    "demoUrl": "https://rihor-abyss.now.sh/",
+    "images": [
+      "./images/abyss_home.png",
+      "./images/abyss_texts.png",
+      "./images/abyss_text.png"
+    ]
+  },
+  {
     "title": "Finder",
     "description": "App that searches for content on google images and wikipedia for any givern subject.",
     "tecnologies": ["Javascript", "Express", "Algorithmia", "Watson"],
