@@ -16,13 +16,13 @@ const Article = styled.article`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 50px;
 `;
 
 const Header = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
 
   h1 {
     font-size: clamp(36px, 42px, 42px);
@@ -35,10 +35,11 @@ const Header = styled.header`
 
 const List = styled(motion.ul)`
   display: flex;
+  gap: 20px;
 
   li {
-    height: 120px;
     padding: 20px;
+    gap: 15px;
 
     a {
       height: 100%;
@@ -68,19 +69,16 @@ export default function Contact() {
             url="mailto: rihor.pedro@outlook.com?subject=[CONTACT]"
             src={emailSVG}
             alt="Email"
-            text="Email"
           />
           <ImageLinkItem
             url="https://github.com/rihor"
             src={githubSVG}
             alt="Github"
-            text="Github"
           />
           <ImageLinkItem
             url="https://www.linkedin.com/in/phpinhov/"
             src={linkedinSVG}
             alt="Linkedin"
-            text="Linkedin"
           />
         </List>
       </Article>

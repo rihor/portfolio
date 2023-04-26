@@ -8,23 +8,25 @@ import { ImageLinkItem } from "../components/imageLinkItem";
 import dark from "../styles/themes/dark";
 import reactSVG from "../images/react.svg";
 import nextSVG from "../images/next.svg";
-import gatsbySVG from "../images/gatsby.svg";
+import threeSVG from "../images/three.svg";
 import reduxSVG from "../images/redux.svg";
 import jestSVG from "../images/jest.svg";
-import sequelizeSVG from "../images/sequelize.svg";
-import adonisSVG from "../images/adonis.svg";
-import rollupSVG from "../images/rollup.svg";
+import laravelSVG from "../images/laravel.svg";
+import nestSVG from "../images/nest.svg";
 import typescriptSVG from "../images/typescript.svg";
-import expressSVG from "../images/express.svg";
 import pythonSVG from "../images/python.svg";
-import eslintSVG from "../images/eslint.svg";
+import dockerPNG from "../images/docker.png";
 
 const Article = styled.article`
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
   header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    gap: 24px;
 
     h1 {
       font-size: clamp(36px, 42px, 42px);
@@ -40,24 +42,15 @@ const Article = styled.article`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
   }
 `;
 
-const IconsSection = styled.section`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  & + section {
-    margin: 0 20px;
-  }
-`;
-
 const List = styled(motion.ul)`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
   li {
     height: 120px;
@@ -79,97 +72,53 @@ export default function Skills() {
       <SEO title="Skills" themeColor={dark.colors.metaBackground} />
       <Article>
         <header>
-          <h1>My skills</h1>
-          <p>
-            Through my life I&#x27;ve gathered some experience with these
-            tecnologies
-          </p>
+          <h1>Skills</h1>
+          <p>These are the technologies that I&apos;m comfortable with.</p>
         </header>
         <section>
-          <IconsSection>
-            <h2>Frontend</h2>
-            <List
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-            >
-              <ImageLinkItem
-                src={reactSVG}
-                url="https://reactjs.org/"
-                alt="React"
-              />
-              <ImageLinkItem
-                src={nextSVG}
-                url="https://nextjs.org/"
-                alt="Next"
-              />
-              <ImageLinkItem
-                src={gatsbySVG}
-                url="https://www.gatsbyjs.org/"
-                alt="Gatsby"
-              />
-            </List>
-          </IconsSection>
-          <IconsSection>
-            <h2>Backend</h2>
-            <List
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-            >
-              <ImageLinkItem
-                src={expressSVG}
-                url="https://expressjs.com/"
-                alt="Express"
-              />
-              <ImageLinkItem
-                src={adonisSVG}
-                url="https://adonisjs.com/"
-                alt="Adonis"
-              />
-              <ImageLinkItem
-                src={sequelizeSVG}
-                url="https://sequelize.org/"
-                alt="Sequelize"
-              />
-            </List>
-          </IconsSection>
-          <IconsSection>
-            <h2>General</h2>
-            <List
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-            >
-              <ImageLinkItem
-                src={jestSVG}
-                url="https://jestjs.io/"
-                alt="Jest"
-              />
-              <ImageLinkItem
-                src={reduxSVG}
-                url="https://redux.js.org/"
-                alt="Redux"
-              />
-              <ImageLinkItem
-                src={rollupSVG}
-                url="https://rollupjs.org/"
-                alt="Rollup"
-              />
-              <ImageLinkItem
-                src={eslintSVG}
-                url="https://eslint.org/"
-                alt="ESLint"
-              />
-              <ImageLinkItem
-                src={typescriptSVG}
-                url="https://www.typescriptlang.org/"
-                alt="Typescript"
-              />
-              <ImageLinkItem
-                src={pythonSVG}
-                url="https://www.python.org/"
-                alt="Python"
-              />
-            </List>
-          </IconsSection>
+          <List
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+          >
+            <ImageLinkItem
+              src={reactSVG}
+              url="https://reactjs.org/"
+              alt="React"
+            />
+            <ImageLinkItem src={nextSVG} url="https://nextjs.org/" alt="Next" />
+            <ImageLinkItem
+              src={threeSVG}
+              url="https://threejs.org/"
+              alt="Three.js"
+            />
+            <ImageLinkItem
+              src={dockerPNG}
+              url="https://www.docker.com/"
+              alt="Docker"
+            />
+            <ImageLinkItem src={nestSVG} url="https://nestjs.com/" alt="Nest" />
+            <ImageLinkItem
+              src={laravelSVG}
+              url="https://laravel.com/"
+              alt="Laravel"
+            />
+            <ImageLinkItem src={jestSVG} url="https://jestjs.io/" alt="Jest" />
+            <ImageLinkItem
+              src={reduxSVG}
+              url="https://redux.js.org/"
+              alt="Redux"
+            />
+            <ImageLinkItem
+              src={typescriptSVG}
+              url="https://www.typescriptlang.org/"
+              alt="Typescript"
+            />
+            <ImageLinkItem
+              src={pythonSVG}
+              url="https://www.python.org/"
+              alt="Python"
+            />
+          </List>
         </section>
       </Article>
     </Layout>
