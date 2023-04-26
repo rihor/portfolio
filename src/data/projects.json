@@ -23,7 +23,6 @@
     "description": "App that searches for content on google images and wikipedia for any givern subject.",
     "tecnologies": ["Javascript", "Express", "Algorithmia", "Watson"],
     "codeUrl": "https://github.com/rihor/finder",
-    "demoUrl": "https://finder-rihor.herokuapp.com/",
     "images": ["./images/finder.png"]
   },
   {
