@@ -55,24 +55,5 @@
     "codeUrl": "https://github.com/rihor/portfolio",
     "demoUrl": "https://rihor-portfolio.now.sh/",
     "images": ["./images/portfolio.png"]
-  },
-  {
-    "title": "Wallpp",
-    "description": "App to upload and download wallpapers that I developed to learn Next and Adonis.",
-    "tecnologies": ["Next", "Adonis"],
-    "codeUrl": "https://github.com/rihor/Wallpp",
-    "images": ["./images/wallpp_home.png", "./images/wallpp_sign.png"]
-  },
-  {
-    "title": "Forum",
-    "description": "Backend of a forum that I developed to learn Typescript and TypeORM.",
-    "tecnologies": ["Typescript", "Express", "TypeORM"],
-    "codeUrl": "https://github.com/rihor/Forum-backend"
-  },
-  {
-    "title": "Pokemon Image List",
-    "description": "Relates PokeAPI results to high quality official images.",
-    "tecnologies": ["Python", "PokeAPI", "Requests"],
-    "codeUrl": "https://github.com/rihor/pokemon-image-list"
   }
 ]
