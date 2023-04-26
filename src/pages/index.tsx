@@ -50,13 +50,11 @@ const Article = styled(motion.article)`
     margin-bottom: 16px;
 
     h1 {
-      font-size: clamp(34px, 42px, 42px);
-      margin-left: -0.04em;
+      font-size: clamp(36px, 48px, 56px);
     }
 
     h2 {
       font-size: clamp(16px, 22px, 24px);
-      opacity: 0.8;
     }
   }
 
@@ -80,13 +78,9 @@ function Home() {
         >
           <header>
             <h1>Pedro Pinho</h1>
-            <h2>FullStack Developer</h2>
+            <h2>Software Developer</h2>
           </header>
-          <p>
-            Passionate about development, I study every day to become a better
-            developer. I love web development and I can bring your idea to
-            market.
-          </p>
+          <p>Passionate about building great experiences.</p>
         </Article>
         <aside>
           <canvas className="char" width={240} height={240} />
