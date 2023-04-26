@@ -58,7 +58,6 @@
     "babel-plugin-styled-components": "^1.10.7",
     "babel-preset-gatsby": "^0.2.31",
     "eslint": "^6.8.0",
-    "eslint-config-gojutin": "0.0.16",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-immutable": "^1.0.0",
     "eslint-plugin-import": "^2.20.1",

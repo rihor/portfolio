@@ -4675,11 +4675,6 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
-eslint-config-gojutin@0.0.16:
-  version "0.0.16"
-  resolved "https://registry.yarnpkg.com/eslint-config-gojutin/-/eslint-config-gojutin-0.0.16.tgz#f02dce1bbeefcd75ccc203fbcaf39cfb0ea6700d"
-  integrity sha512-y2UqJE2qLROMvYxSmuSIi3smEfXmAr7lRVPWyWxCUVobUUu5W1s9fLj0uDvYxDvO8hX1NDXMmJDR33AuQZy3gg==
-
 eslint-config-prettier@^6.10.0:
   version "6.10.1"
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.10.1.tgz#129ef9ec575d5ddc0e269667bf09defcd898642a"
