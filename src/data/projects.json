@@ -19,6 +19,13 @@
     ]
   },
   {
+    "title": "Shaders Gallery",
+    "description": "My Three.js gallery.",
+    "tecnologies": ["Typescript", "Three.js", "Next"],
+    "demoUrl": "https://pedro-pinho-shaders.vercel.app/",
+    "codeUrl": "https://github.com/rihor/shaders-gallery"
+  },
+  {
     "title": "Finder",
     "description": "App that searches for content on google images and wikipedia for any givern subject.",
     "tecnologies": ["Javascript", "Express", "Algorithmia", "Watson"],
