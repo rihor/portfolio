@@ -1,5 +1,5 @@
 ---
-name: Pedro Pinho — portfolio pilot
+name: Pedro Pinho — portfolio
 description: One fixed page, four tabs, light grey paper with dark floating points. Black, white and greys only.
 colors:
   paper: "#e6e6e3"
@@ -78,7 +78,7 @@ components:
     rounded: "{rounded.none}"
 ---
 
-# Design System: portfolio pilot
+# Design System: portfolio
 
 The CSS custom properties at the top of `style.css` are the source of truth. This file explains them. If the two disagree, fix one; don't add a third value.
 
