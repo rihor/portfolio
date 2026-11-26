@@ -2,7 +2,7 @@
   --paper: #efefed;
   --ink: #0d0d0d;
   --grey-1: #5c5c5a;
-  --grey-2: #9a9a97;
+  --grey-2: #6b6b68;
   --line: #cfcfcc;
   --gutter: clamp(16px, 3vw, 40px);
   --display: "Inter Tight", system-ui, sans-serif;
@@ -53,6 +53,7 @@ ul, ol { list-style: none; }
 .progress { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--line); }
 .progress i { display: block; height: 100%; width: 0; background: var(--ink); transition: width .7s var(--ease), background .5s; }
 
+body.dark { --grey-2: #9e9e9b; }
 body.dark .chrome { color: var(--paper); }
 body.dark .btn:hover { background: var(--paper); color: var(--ink); }
 body.dark .progress { background: #333; }
@@ -72,7 +73,7 @@ body.dark .progress i { background: var(--paper); }
 .slide.on { visibility: visible; clip-path: inset(0 0 0 0); transition: clip-path .8s var(--ease), visibility 0s; z-index: 2; }
 .slide.leaving { visibility: visible; z-index: 1; clip-path: inset(0 0 0 0); transition: none; }
 .slide.from-top { clip-path: inset(0 0 100% 0); }
-.slide.invert { background: var(--ink); color: var(--paper); }
+.slide.invert { --grey-2: #9e9e9b; background: var(--ink); color: var(--paper); }
 .slide.invert .kicker { color: var(--grey-2); }
 
 /* staggered text reveal */
@@ -94,7 +95,7 @@ body.dark .progress i { background: var(--paper); }
 .invert .lede { color: var(--grey-2); }
 
 .tags { display: flex; gap: 8px; flex-wrap: wrap; }
-.tags li { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; }
+.tags li { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; }
 
 /* split slides: text left, big number right */
 .slide.split { flex-direction: row; align-items: center; justify-content: space-between; gap: 6vw; }
