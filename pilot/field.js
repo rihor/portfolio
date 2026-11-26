@@ -1,4 +1,4 @@
-// One persistent three.js scene behind every tab: slow, monochrome floating points.
+// One persistent three.js scene behind every tab: slow, dark-grey floating points on light grey.
 // Created once on load; tab switches never touch it.
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js";
 
@@ -9,11 +9,11 @@ let renderer;
 try {
   renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: false });
 } catch {
-  // No WebGL: the plain black background stays.
+  // No WebGL: the plain paper background stays.
 }
 
 if (renderer) {
-  renderer.setClearColor(0x0a0a0a, 1);
+  renderer.setClearColor(0xe6e6e3, 1); // --c-paper
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 100);
   camera.position.z = 14;
@@ -55,7 +55,7 @@ if (renderer) {
         gl_PointSize = size * uDpr * (14.0 / -mv.z);
         // grey points, dimmer with depth, gently twinkling
         float depth = smoothstep(26.0, 4.0, -mv.z);
-        vAlpha = mix(0.12, 0.55, seed) * depth * (0.75 + 0.25 * sin(uTime * 0.6 + seed * 60.0));
+        vAlpha = mix(0.10, 0.45, seed) * depth * (0.75 + 0.25 * sin(uTime * 0.6 + seed * 60.0));
       }`,
     fragmentShader: /* glsl */ `
       varying float vAlpha;
@@ -63,7 +63,7 @@ if (renderer) {
         float d = length(gl_PointCoord - 0.5);
         if (d > 0.5) discard;
         float a = smoothstep(0.5, 0.1, d) * vAlpha;
-        gl_FragColor = vec4(vec3(0.86), a);
+        gl_FragColor = vec4(vec3(0.08), a); // near --c-ink
       }`,
   });
   const points = new THREE.Points(geo, mat);
