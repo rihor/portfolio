@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pedro Pinho, Product Engineer</title>
+<meta name="description" content="Pedro Pinho is a product engineer in Brazil. Monest, Uhuu, Hero99.">
+<meta name="theme-color" content="#e6e6e3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23e6e6e3'/%3E%3Crect x='4' y='4' width='8' height='8' fill='%230d0d0d'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="field" aria-hidden="true"></canvas>
+
+<div class="frame">
+  <header class="top">
+    <a class="mark" href="#about">Pedro Pinho<span>Product Engineer · Brazil</span></a>
+    <nav class="tabs" role="tablist" aria-label="Sections">
+      <button role="tab" id="t-about" aria-controls="about" data-tab="about">About</button>
+      <button role="tab" id="t-work" aria-controls="work" data-tab="work">Work</button>
+      <button role="tab" id="t-lab" aria-controls="lab" data-tab="lab">Lab</button>
+      <button role="tab" id="t-contact" aria-controls="contact" data-tab="contact">Contact</button>
+    </nav>
+  </header>
+
+  <main class="panels">
+
+    <section class="panel" id="about" role="tabpanel" aria-labelledby="t-about">
+      <!-- TODO(pedro): placeholder About headline carried over from the pilot. Replace with final copy before/after launch. -->
+      <h1 class="display">I build the part<br>you touch <em>and</em><br>the part underneath.</h1>
+      <p class="lede">Pedro Pinho, product engineer. Interfaces customers use and the systems behind them, across three unrelated businesses: debt collection, event ticketing and custom products.</p>
+    </section>
+
+    <section class="panel" id="work" role="tabpanel" aria-labelledby="t-work">
+      <ol class="jobs">
+        <li class="job">
+          <h2>Monest</h2>
+          <p class="meta">2025 – now · Debt collection</p>
+          <p class="fact"><b>3M</b> conversations a month</p>
+          <p class="desc">MIA, an LLM agent that negotiates debts. I built the eval system behind its model upgrades and integrated it with Itaú, Aegea and Wlan.</p>
+        </li>
+        <li class="job">
+          <h2>Uhuu</h2>
+          <p class="meta">2023 – 2025 · Event ticketing</p>
+          <p class="fact"><b>Live</b> seat maps</p>
+          <p class="desc">Ticketing built around personalized discounts. I kept the platform healthy through on-sale spikes and chased bugs through real-time seat selection.</p>
+        </li>
+        <li class="job">
+          <h2>Hero99 <span>at Merchadise</span></h2>
+          <p class="meta">2021 – 2022 · Custom products</p>
+          <p class="fact"><b>1 GB &lt; 5 min</b> inventory ingestion</p>
+          <p class="desc">Both ends of the product: the pipeline that ingests the garment inventory, and the 2D/3D canvas customers design t-shirts on.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="panel" id="lab" role="tabpanel" aria-labelledby="t-lab">
+      <ol class="index">
+        <li><a href="https://pedro-pinho-shaders.vercel.app/" target="_blank" rel="noopener"><span class="t">Shaders Gallery</span><span class="d">Three.js shader playground</span></a></li>
+        <li><a href="https://github.com/rihor/blog" target="_blank" rel="noopener"><span class="t">Abismo</span><span class="d">A blog for my book club texts</span></a></li>
+        <li><a href="https://github.com/ouvidor" target="_blank" rel="noopener"><span class="t">Ouvidor</span><span class="d">Municipal ombudsman app, university</span></a></li>
+        <li><a href="https://github.com/rihor/portfolio/tree/13b815542f2233e8f8a435f19c65a3dcdcf515d1" target="_blank" rel="noopener"><span class="t">Portfolio 2020</span><span class="d">The previous version of this site</span></a></li>
+      </ol>
+    </section>
+
+    <section class="panel" id="contact" role="tabpanel" aria-labelledby="t-contact">
+      <h2 class="display">Write to me.</h2>
+      <a class="big-link" href="mailto:rihor.pedro@outlook.com">rihor.pedro@outlook.com</a>
+      <p class="row-links">
+        <a href="https://github.com/rihor" target="_blank" rel="noopener">github.com/rihor</a>
+        <a href="https://www.linkedin.com/in/phpinhov/" target="_blank" rel="noopener">linkedin.com/in/phpinhov</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="bottom">
+    <span>rihor</span>
+    <span>© 2026</span>
+  </footer>
+</div>
+
+<script src="tabs.js"></script>
+<script type="module" src="field.js"></script>
+</body>
+</html>
