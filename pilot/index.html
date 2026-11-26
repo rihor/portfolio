@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pedro Pinho, Product Engineer</title>
+<meta name="description" content="Pedro Pinho is a product engineer in Brazil. Monest, Uhuu, Merchadise.">
+<meta name="theme-color" content="#efefed">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="chrome top">
+  <a class="mark" href="#1" data-go="0">Pedro Pinho<span>Product Engineer</span></a>
+  <nav class="links" aria-label="Elsewhere">
+    <a href="https://github.com/rihor" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/phpinhov/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:rihor.pedro@outlook.com">Email</a>
+  </nav>
+</header>
+
+<main id="deck" aria-live="polite">
+
+  <!-- 1 · Intro -->
+  <section class="slide" data-title="Intro">
+    <p class="kicker">Brazil · rihor</p>
+    <h1 class="display">I build the part<br>you touch <em>and</em><br>the part underneath.</h1>
+    <p class="lede">Pedro Pinho, product engineer. Interfaces customers use and the systems behind them, across three unrelated businesses.</p>
+  </section>
+
+  <!-- 2 · Monest -->
+  <section class="slide split" data-title="Monest">
+    <div class="col">
+      <p class="kicker">Now · since 2025 · Debt collection</p>
+      <h2 class="title">Monest</h2>
+      <p class="lede">MIA is an LLM agent that reaches out to debtors and negotiates payment. I built the eval system that lets the team upgrade models and check prompt adherence across specified scenarios, and integrated MIA with client APIs.</p>
+      <ul class="tags"><li>Itaú</li><li>Aegea</li><li>Wlan</li></ul>
+    </div>
+    <div class="fact"><span class="num">3M</span><span class="label">conversations a month</span></div>
+  </section>
+
+  <!-- 3 · Uhuu -->
+  <section class="slide split" data-title="Uhuu">
+    <div class="col">
+      <p class="kicker">2023 — 2025 · Event ticketing</p>
+      <h2 class="title">Uhuu</h2>
+      <p class="lede">Ticketing for shows, built around personalized discount campaigns. I kept a live commerce platform healthy through on-sale spikes and chased bugs through real-time seat selection, where many buyers pick seats on the same map at once.</p>
+    </div>
+    <div class="fact"><span class="num">Live</span><span class="label">seat maps, shared by every buyer</span></div>
+  </section>
+
+  <!-- 4 · Merchadise -->
+  <section class="slide split" data-title="Merchadise">
+    <div class="col">
+      <p class="kicker">2021 — 2022 · Custom products · via Hero99</p>
+      <h2 class="title">Merchadise</h2>
+      <p class="lede">Both ends of the product: a pipeline that ingests the garment inventory, and the 2D canvas customers design their t-shirts on, previewed in 3D.</p>
+    </div>
+    <div class="fact long"><span class="num">1&nbsp;GB<br>&lt;&nbsp;5&nbsp;min</span><span class="label">inventory file ingestion</span></div>
+  </section>
+
+  <!-- 5 · Lab -->
+  <section class="slide" data-title="Lab">
+    <p class="kicker">Also · 2020 — 2023</p>
+    <h2 class="title">Side work</h2>
+    <ol class="index">
+      <li><a href="https://pedro-pinho-shaders.vercel.app/" target="_blank" rel="noopener"><span class="n">01</span><span class="t">Shaders Gallery</span><span class="d">Three.js shader playground</span></a></li>
+      <li><a href="https://github.com/rihor/blog" target="_blank" rel="noopener"><span class="n">02</span><span class="t">Abismo</span><span class="d">A blog for my book club texts</span></a></li>
+      <li><a href="https://github.com/ouvidor" target="_blank" rel="noopener"><span class="n">03</span><span class="t">Ouvidor</span><span class="d">Municipal ombudsman app, university</span></a></li>
+      <li><a href="https://github.com/rihor/portfolio" target="_blank" rel="noopener"><span class="n">04</span><span class="t">Portfolio 2020</span><span class="d">The previous version of this site</span></a></li>
+    </ol>
+  </section>
+
+  <!-- 6 · Contact -->
+  <section class="slide invert" data-title="Contact">
+    <p class="kicker">Contact</p>
+    <h2 class="display">Write to me.</h2>
+    <a class="big-link" href="mailto:rihor.pedro@outlook.com">rihor.pedro@outlook.com</a>
+    <p class="row-links">
+      <a href="https://github.com/rihor" target="_blank" rel="noopener">github.com/rihor</a>
+      <a href="https://www.linkedin.com/in/phpinhov/" target="_blank" rel="noopener">linkedin.com/in/phpinhov</a>
+    </p>
+  </section>
+
+</main>
+
+<button class="edge prev" aria-label="Previous slide"></button>
+<button class="edge next" aria-label="Next slide"></button>
+
+<footer class="chrome bottom">
+  <div class="counter"><b id="cur">01</b> / <span id="tot">06</span> <span id="name" class="name">Intro</span></div>
+  <div class="hint">← → · scroll · swipe</div>
+  <div class="ctrls">
+    <button class="btn" data-dir="-1" aria-label="Previous">←</button>
+    <button class="btn" data-dir="1" aria-label="Next">→</button>
+  </div>
+  <div class="progress"><i id="bar"></i></div>
+</footer>
+
+<script src="deck.js"></script>
+</body>
+</html>
